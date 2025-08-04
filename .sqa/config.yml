@@ -2,73 +2,75 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.6
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/orviz/galaxy:
+    github.com/galaxyproject/galaxy:
       branch: dev
-      repo: https://github.com/orviz/galaxy
+      repo: https://github.com/galaxyproject/galaxy
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/orviz/galaxy git:
+      github.com/galaxyproject/galaxy git:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-beige-moose.sh
-        container: qc.acc_sleazy-corn-caracal
+        - /usr/bin/env sh .sqa/script.sunny-purple-termite.sh
+        container: qc.acc_sleepy-bistre-barb
   QC.Doc:
     repos:
-      github.com/orviz/galaxy find_doc_files.py:
+      github.com/galaxyproject/galaxy find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-eggplant-giraffe.sh
-        container: qc.doc_geeky-puce-shark
-      github.com/orviz/galaxy git:
+        - /usr/bin/env sh .sqa/script.breezy-aquamarine-earwig.sh
+        container: qc.doc_squirrely-eggplant-millipede
+      github.com/galaxyproject/galaxy git:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-beige-slug.sh
-        container: qc.doc_fuzzy-cinnamon-oriole
-      github.com/orviz/galaxy markdownlint:
+        - /usr/bin/env sh .sqa/script.trippy-olive-argentino.sh
+        container: qc.doc_hazy-harlequin-chihuahua
+      github.com/galaxyproject/galaxy markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-xanthic-mongoose.sh
-        container: qc.doc_foggy-pink-kiwi
-      github.com/orviz/galaxy restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.hazy-corn-pig.sh
+        container: qc.doc_flimsy-corn-orangutan
+      github.com/galaxyproject/galaxy restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-champagne-raccoon.sh
-        container: qc.doc_sleepy-brown-markhor
+        - /usr/bin/env sh .sqa/script.slimy-ruby-fowl.sh
+        container: qc.doc_wheezy-saffron-chinchilla
   QC.Lic:
     repos:
-      github.com/orviz/galaxy licensee:
+      github.com/galaxyproject/galaxy licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-apricot-warthog.sh
-        container: qc.lic_dorky-maroon-beagle
+        - /usr/bin/env sh .sqa/script.flaky-xanthic-albatross.sh
+        container: qc.lic_flabby-crimson-yak
   QC.Sec:
     repos:
-      github.com/orviz/galaxy bandit:
+      github.com/galaxyproject/galaxy bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-razzmatazz-forest.sh
-        container: qc.sec_scanty-cream-mayfly
+        - /usr/bin/env sh .sqa/script.craggy-flax-heron.sh
+        container: qc.sec_slaphappy-champagne-peccary
   QC.Sty:
     repos:
-      github.com/orviz/galaxy flake8:
+      github.com/galaxyproject/galaxy flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-cornflower-newfoundland.sh
-        container: qc.sty_flimsy-purple-falcon
-      github.com/orviz/galaxy hadolint:
+        - /usr/bin/env sh .sqa/script.stuffy-magnolia-newfoundland.sh
+        container: qc.sty_wiggy-ruby-anteater
+      github.com/galaxyproject/galaxy hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-crimson-chipmunk.sh
-        container: qc.sty_bumpy-coral-terrier
-      github.com/orviz/galaxy jsonlint:
+        - /usr/bin/env sh .sqa/script.wimpy-puce-dingo.sh
+        container: qc.sty_wiggy-beige-mandrill
+      github.com/galaxyproject/galaxy jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-heliotrope-hyena.sh
-        container: qc.sty_jumpy-corn-binturong
-      github.com/orviz/galaxy stylelint:
+        - /usr/bin/env sh .sqa/script.shaggy-orange-mandrill.sh
+        container: qc.sty_paltry-rust-akbash
+  QC.Uni:
+    repos:
+      github.com/galaxyproject/galaxy pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-fuchsia-termite.sh
-        container: qc.sty_cloudy-ochre-sponge
+        - /usr/bin/env sh .sqa/script.wiggy-carmine-budgerigar.sh
+        container: qc.uni_squirrely-taupe-dormouse
   QC.Ver:
     repos:
-      github.com/orviz/galaxy get_git_tags.py:
+      github.com/galaxyproject/galaxy get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-seashell-wrasse.sh
-        container: qc.ver_baggy-cardinal-vulture
+        - /usr/bin/env sh .sqa/script.squirrely-amethyst-bat.sh
+        container: qc.ver_hazy-firebrick-fly
 timeout: 5400
